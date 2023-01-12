@@ -1,4 +1,5 @@
 import 'package:donation_app_igdtuw/screens/home_screen.dart';
+import 'package:donation_app_igdtuw/screens/profileview.dart';
 import 'homepagemain.dart';
 import 'package:donation_app_igdtuw/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
@@ -244,9 +245,8 @@ class _LoginScreenState extends State<LoginScreen> {
             .then((uid) => {
                   Fluttertoast.showToast(msg: "Login Successful"),
                   Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (context) =>
-                          // Home()
-                          Home(),
+                      MaterialPageRoute(builder: (context) => viewprofile(),
+                          // Home(),
                       )),
                 });
       } on FirebaseAuthException catch (error) {
