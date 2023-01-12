@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Email And Password Login',
+      title: 'cb16',
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: Profile(),
+      home: BoardingPage(),
     );
   }
 }

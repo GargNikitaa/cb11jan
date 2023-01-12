@@ -121,13 +121,16 @@ class _BoardingScreenState extends State<BoardingPage> {
                     borderRadius: BorderRadius.circular(10),
                     gradient: LinearGradient(
                       colors: [
-                        Colors.orange.shade700,
+                        Colors.orange.shade500,
                         Colors.orange.shade900
                       ],
                     ),
                   ),
-                  child: FlatButton(
+                  child: OutlinedButton(
                     onPressed: (){},
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: Colors.transparent),
+                    ),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
