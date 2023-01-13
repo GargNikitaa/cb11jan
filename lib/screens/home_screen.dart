@@ -7,6 +7,7 @@ import 'package:intl/intl.dart';
 
 import 'ViewNote.dart';
 import 'login_screen.dart';
+import 'navbar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -153,40 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       //bottom nav
-      bottomNavigationBar: NavigationBarTheme(
-        data: NavigationBarThemeData(
-          indicatorColor: Colors.black,
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(30.0), topRight: Radius.circular(30.0), ),
-          child: NavigationBar(
-            height: 60,
-            backgroundColor: Colors.white,
-            labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-            selectedIndex: index,
-            animationDuration: Duration(seconds: 1),
-            onDestinationSelected: (index) =>
-                setState(() => this.index = index),
-            destinations: [
-              NavigationDestination(
-                icon: Icon(Icons.home_outlined),
-                selectedIcon: Icon(Icons.home_outlined, color: Colors.orange.shade900.withOpacity(0.90)),
-                label: '',
-              ),
-              NavigationDestination(
-                icon: Icon(Icons.folder_open_outlined),
-                selectedIcon: Icon(Icons.folder_open_outlined, color: Colors.orange.shade900.withOpacity(0.90)),
-                label: '',
-              ),
-              NavigationDestination(
-                icon: Icon(Icons.person_outline),
-                selectedIcon: Icon(Icons.person_outline, color: Colors.orange.shade900.withOpacity(0.90)),
-                label: '',
-              ),
-            ],
-          ),
-        ),
-      ),
+      // bottomNavigationBar: navPage(),
 
       //end
     );
