@@ -59,6 +59,7 @@ flutter:
     - assets/pic3.jpg
     - assets/pichand.jpg
     - assets/mars.png
+    - assets/donationquote.jpeg
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

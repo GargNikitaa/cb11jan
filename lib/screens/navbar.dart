@@ -1,14 +1,14 @@
+import 'package:donation_app_igdtuw/screens/home_screen.dart';
 import 'package:donation_app_igdtuw/screens/profileview.dart';
 import 'package:flutter/material.dart';
 import 'homepagemain.dart';
-import 'home_screen.dart';
 
-class navPage extends StatefulWidget {
+class navMainPage extends StatefulWidget {
   @override
-  _navPageState createState() => _navPageState();
+  _navMainPageState createState() => _navMainPageState();
 }
 
-class _navPageState extends State<navPage>{
+class _navMainPageState extends State<navMainPage>{
   int index = 0;
   final screens = [
     Home(),

@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-<<<<<<< HEAD
 import 'navbar.dart';
 
 final Uri _url = Uri.parse('https://celestial-biscuit.vercel.app/About');
@@ -14,8 +13,6 @@ Future<void> _launchUrl() async {
   }
 }
 
-=======
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
 class viewprofile extends StatefulWidget {
   const viewprofile({Key? key}) : super(key: key);
 
@@ -45,6 +42,26 @@ class _viewprofileState extends State<viewprofile> {
 
                 return ListView(
                   children: [
+                    // ElevatedButton(
+                    //   onPressed: () {
+                    //     Navigator.of(context).pop();
+                    //   },
+                    //   child: Icon(
+                    //     Icons.arrow_back_rounded,
+                    //     size: 24.0,
+                    //   ),
+                    //   style: ButtonStyle(
+                    //     backgroundColor: MaterialStateProperty.all(
+                    //       Colors.transparent,
+                    //     ),
+                    //     padding: MaterialStateProperty.all(
+                    //       EdgeInsets.symmetric(
+                    //         horizontal: 25.0,
+                    //         vertical: 8.0,
+                    //       ),
+                    //     ),
+                    //   ),
+                    // ),
                     Container(
                       padding: const EdgeInsets.all(1.0),
                       //   child: Container(
@@ -61,15 +78,9 @@ class _viewprofileState extends State<viewprofile> {
                             height: 20,
                           ),
                           Padding(
-<<<<<<< HEAD
                             padding: const EdgeInsets.fromLTRB(0,15,0,0),
                             child: CircleAvatar(
                               radius: 65,
-=======
-                            padding: const EdgeInsets.all(10.0),
-                            child: CircleAvatar(
-                              radius: 85,
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
                               child: ClipOval(
                                 // child: Image.asset(
                                 //   "assets/pfp.jpeg",
@@ -77,7 +88,6 @@ class _viewprofileState extends State<viewprofile> {
                                 //   width: 200,
                                 //   height: 200,
                                 // ),
-<<<<<<< HEAD
                                 child: CircleAvatar(
                                   backgroundImage: NetworkImage(data['image_url']),
                                   radius: 62,
@@ -85,7 +95,7 @@ class _viewprofileState extends State<viewprofile> {
                               ),
                             ),
                           ),
-                          SizedBox(width: 35,),
+                          SizedBox(width: 20,),
                           Align(
                             alignment: Alignment.center,
                             child: Column(
@@ -95,7 +105,7 @@ class _viewprofileState extends State<viewprofile> {
                                 Text(
                                   data['firstName'],
                                   style: TextStyle(
-                                    fontSize: 35.0,
+                                    fontSize: 30.0,
                                     fontWeight: FontWeight.w900,
                                     fontFamily: 'Arial',
                                     color: Colors.white,
@@ -110,7 +120,7 @@ class _viewprofileState extends State<viewprofile> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.all(1.0),
+                      padding: const EdgeInsets.all(0),
                       //   child: Container(
                       height: 100,
                       color: Colors.grey[900],
@@ -144,13 +154,14 @@ class _viewprofileState extends State<viewprofile> {
                     //     ),
                     //   ),
                     // ),
+
                     Divider(
                       color: Colors.orange.shade900,
                       indent: 80,
                       endIndent: 80,
                     ),
                     Container(
-                      padding: const EdgeInsets.all(1.0),
+                      padding: const EdgeInsets.all(0.0),
                       //   child: Container(
                       height: 100,
                       color: Colors.grey[900],
@@ -164,84 +175,7 @@ class _viewprofileState extends State<viewprofile> {
                               fontWeight: FontWeight.w900,
                               fontFamily: 'Spartan',
                               fontSize: 20,
-=======
-                                child: CircleAvatar(),
-                              ),
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.center,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  data['firstName'],
-                                  style: TextStyle(
-                                    fontSize: 40.0,
-                                    fontWeight: FontWeight.w900,
-                                    fontFamily: 'Arial',
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Container(
-                                  //padding: EdgeInsets.all(10.0),
-                                  height: 80,
-                                  width: 180,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Colors.orange.shade900
-                                        .withOpacity(0.20),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '78',
-                                        style: TextStyle(
-                                          fontSize: 45,
-                                          color: Colors.orange.shade900,
-                                          fontFamily: 'Arial',
-                                          fontWeight: FontWeight.w900,
-                                        ),
-                                      ),
-                                      Container(
-                                        child: Image.asset('assets/fire.png',
-                                            height: 40, width: 40),
-                                      ),
-                                      Text(
-                                        ' GoodWill\n  Score',
-                                        style: TextStyle(
-                                          fontSize: 18.0,
-                                          color: Colors.white,
-                                          fontFamily: 'Spartan',
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(1.0),
-                      //   child: Container(
-                      height: 100,
-                      color: Colors.grey[900],
-                      child: const Center(
-                        child: Text(
-                          "Edit Settings",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            fontFamily: 'Spartan',
-                            fontSize: 25,
                           ),
                         ),
                       ),
@@ -252,28 +186,18 @@ class _viewprofileState extends State<viewprofile> {
                       endIndent: 80,
                     ),
                     Container(
-                      padding: const EdgeInsets.all(1.0),
+                      padding: const EdgeInsets.all(0.0),
                       //   child: Container(
                       height: 100,
                       color: Colors.grey[900],
-<<<<<<< HEAD
                       child: const Center(
                         child: Text(
                           "About Us",
-=======
-                      child: Center(
-                        child: Text(
-                          "Visit our Website",
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
                             fontFamily: 'Spartan',
-<<<<<<< HEAD
                             fontSize: 20,
-=======
-                            fontSize: 25,
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
                           ),
                         ),
                       ),
@@ -284,29 +208,96 @@ class _viewprofileState extends State<viewprofile> {
                       endIndent: 80,
                     ),
                     Container(
-                      padding: const EdgeInsets.all(1.0),
+                      padding: const EdgeInsets.all(0.0),
+                      //   child: Container(
+                      height: 100,
+                      color: Colors.grey[900],
+                      child:  Center(
+                        child: TextButton(
+                          onPressed:() async{
+                            String email = Uri.encodeComponent("celestialbiscuitigdtuw.016@gmail.com");
+                            String subject = Uri.encodeComponent("Request to include a drive in donation_app");
+                            String body = Uri.encodeComponent("Please include \n\n 1) drive name\n 2)drive date\n 3)drive venue \n 4)description of donation drive \n 5)Donation drive manager-contact details");
+                            // print(subject); //output: Hello%20Flutter
+                            Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
+                            if (await launchUrl(mail)) {
+                            //email app opened
+                            }else{
+                            //email app is not opened
+                            }
+                          },
+                          child: Text(
+                            "Request To add a donation drive",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontFamily: 'Spartan',
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.orange.shade900,
+                      indent: 80,
+                      endIndent: 80,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(0.0),
+                      //   child: Container(
+                      height: 100,
+                      color: Colors.grey[900],
+                      child:  Center(
+                        child: TextButton(
+                          onPressed:() async{
+                            String email = Uri.encodeComponent("celestialbiscuitigdtuw.016@gmail.com");
+                            String subject = Uri.encodeComponent("");
+                            String body = Uri.encodeComponent("");
+                            // print(subject); //output: Hello%20Flutter
+                            Uri mail = Uri.parse("mailto:$email?subject=$subject&body=$body");
+                            if (await launchUrl(mail)) {
+                              //email app opened
+                            }else{
+                              //email app is not opened
+                            }
+                          },
+                          child: Text(
+                            "Mail us",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontFamily: 'Spartan',
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Divider(
+                      color: Colors.orange.shade900,
+                      indent: 80,
+                      endIndent: 80,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(0.0),
                       //   child: Container(
                       height: 100,
                       color: Colors.grey[900],
                       child: const Center(
                         child: Text(
-<<<<<<< HEAD
                           "Log out",
-=======
-                          "Celestial Biscuit IGDTUW",
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.w900,
                             fontFamily: 'Spartan',
-                            fontSize: 25,
+                            fontSize: 20,
                           ),
                         ),
                       ),
                     ),
-<<<<<<< HEAD
                     Container(
-                      padding: const EdgeInsets.all(1.0),
+                      padding: const EdgeInsets.all(0.0),
                       //   child: Container(
                       height: 80,
                       color: Colors.grey[900],
@@ -314,22 +305,41 @@ class _viewprofileState extends State<viewprofile> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
-                            padding: EdgeInsets.all(15.0),
-                            child: Image.asset('assets/linkedin.png' ,
-                                height: 40, width: 40),
+                          TextButton(
+                            onPressed:() async{
+                              const url = "https://www.linkedin.com/company/celestial-biscuit-igdtuw/mycompany/";
+                              final Uri _url = Uri.parse(url);
+                              await launchUrl(_url,mode: LaunchMode.externalApplication);
+                            } ,
+                            child: Container(
+                              padding: EdgeInsets.all(15.0),
+                              child: Image.asset('assets/linkedin.png' ,
+                                  height: 40, width: 40),
+                            ),
                           ),
-                          Container(
-                            padding: EdgeInsets.all(15.0),
-                            child: Image.asset('assets/instagram.png',
-                                height: 40, width: 40),
+                          TextButton(
+                            onPressed:() async{
+                              const url = "https://www.instagram.com/celestialbiscuit/";
+                              final Uri _url = Uri.parse(url);
+                              await launchUrl(_url,mode: LaunchMode.externalApplication);
+                            } ,
+                            child: Container(
+                              padding: EdgeInsets.all(15.0),
+                              child: Image.asset('assets/instagram.png',
+                                  height: 40, width: 40),
+                            ),
                           ),
-                          Container(
-                            padding: EdgeInsets.all(15.0),
-
-                            child: Image.asset('assets/twitter.png',
-                                height: 40, width: 40),
-
+                          TextButton(
+                            onPressed:() async{
+                              const url = "https://twitter.com/cbigdtuw";
+                              final Uri _url = Uri.parse(url);
+                              await launchUrl(_url,mode: LaunchMode.externalApplication);
+                            } ,
+                            child: Container(
+                              padding: EdgeInsets.all(15.0),
+                              child: Image.asset('assets/twitter.png',
+                                  height: 40, width: 40),
+                            ),
                           ),
                         ],
                       ),
@@ -338,96 +348,14 @@ class _viewprofileState extends State<viewprofile> {
                 );
               }
 
-=======
-                    Divider(
-                      color: Colors.orange.shade900,
-                      indent: 80,
-                      endIndent: 80,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(1.0),
-                      //   child: Container(
-                      height: 100,
-                      color: Colors.grey[900],
-                      child: const Center(
-                        child: Text(
-                          "Change Password",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            fontFamily: 'Spartan',
-                            fontSize: 25,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Divider(
-                      color: Colors.orange.shade900,
-                      indent: 80,
-                      endIndent: 80,
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(1.0),
-                      //   child: Container(
-                      height: 100,
-                      color: Colors.grey[900],
-                      child: const Center(
-                        child: Text(
-                          "Notification Settings",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            fontFamily: 'Spartan',
-                            fontSize: 25,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(1.0),
-                      //   child: Container(
-                      height: 80,
-                      color: Colors.grey[900],
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.all(15.0),
-                            child: Image.asset('assets/linkedin.png',
-                                height: 40, width: 40),
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(15.0),
-                            child: Image.asset('assets/instagram.png',
-                                height: 40, width: 40),
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(15.0),
-                            child: Image.asset('assets/twitter.png',
-                                height: 40, width: 40),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                );
-              }
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453
             } else if (snapshot.connectionState == ConnectionState.none) {
               return const Text("No data");
             }
             return const Center(child: CircularProgressIndicator());
           },
-<<<<<<< HEAD
         )
-        // bottomNavigationBar: navPage(),
+      // bottomNavigationBar: navPage(),
     );
   }
 
 }
-=======
-        ));
-  }
-}
->>>>>>> 04f727bb6c1ce50ac5a5744c0e30f042db305453

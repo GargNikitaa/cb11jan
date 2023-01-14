@@ -154,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen> {
         },
       ),
       //bottom nav
-      // bottomNavigationBar: navPage(),
+      bottomNavigationBar: navMainPage(),
 
       //end
     );
