@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'editprofile.dart';
 import 'navbar.dart';
 
 final Uri _url = Uri.parse('https://celestial-biscuit.vercel.app/About');
@@ -82,14 +83,14 @@ class _viewprofileState extends State<viewprofile> {
                             child: CircleAvatar(
                               radius: 65,
                               child: ClipOval(
-                                // child: Image.asset(
-                                //   "assets/pfp.jpeg",
-                                //   fit: BoxFit.cover,
-                                //   width: 200,
-                                //   height: 200,
-                                // ),
+
                                 child: CircleAvatar(
-                                  backgroundImage: NetworkImage(data['image_url']),
+                                  backgroundImage: NetworkImage(
+                                      data['image_url']
+                                    // data["image_url"]!=null
+                                    //     ?Image.network(data["image_url"])
+                                    //     : Container(),
+                                  ),
                                   radius: 62,
                                 ),
                               ),
@@ -119,19 +120,27 @@ class _viewprofileState extends State<viewprofile> {
                         ],
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.all(0),
-                      //   child: Container(
-                      height: 100,
-                      color: Colors.grey[900],
-                      child: const Center(
-                        child: Text(
-                          "Edit Profile",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w900,
-                            fontFamily: 'Spartan',
-                            fontSize: 20,
+                    TextButton(
+                      onPressed: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Profile()),
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(0),
+                        //   child: Container(
+                        height: 100,
+                        color: Colors.grey[900],
+                        child: const Center(
+                          child: Text(
+                            "Edit Profile",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontFamily: 'Spartan',
+                              fontSize: 20,
+                            ),
                           ),
                         ),
                       ),

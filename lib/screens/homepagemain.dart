@@ -267,37 +267,7 @@ class _HomeState extends State<Home> {
           ),
         ),
       //
-      bottomNavigationBar: NavigationBarTheme(
-        data: NavigationBarThemeData(
-          indicatorColor: Colors.black,
-        ),
-        child: NavigationBar(
-          height: 60,
-          backgroundColor: Colors.white,
-          labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-          selectedIndex: index,
-          animationDuration: Duration(seconds: 1),
-          onDestinationSelected: (index) =>
-              setState(() => this.index = index),
-          destinations: [
-            NavigationDestination(
-              icon: Icon(Icons.home_outlined),
-              selectedIcon: Icon(Icons.home_outlined, color: Colors.orange.shade900.withOpacity(0.90)),
-              label: '',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.folder_open_rounded),
-              selectedIcon: Icon(Icons.folder_open_rounded, color: Colors.orange.shade900.withOpacity(0.90)),
-              label: '',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.person_outline),
-              selectedIcon: Icon(Icons.person_outline, color: Colors.orange.shade900.withOpacity(0.90)),
-              label: '',
-            ),
-          ],
-        ),
-      ),
+
       );
 
   }

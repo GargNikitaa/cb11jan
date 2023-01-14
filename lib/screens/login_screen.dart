@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import 'homepagemain.dart';
+import 'navbar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -246,7 +247,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Fluttertoast.showToast(msg: "Login Successful"),
           Navigator.of(context).pushReplacement(
               MaterialPageRoute(builder: (context) =>
-              Home()
+                  navMainPage()
               // viewprofile(),
               )),
         });
